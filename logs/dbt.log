@@ -1,0 +1,47 @@
+[0m11:58:31.860727 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109912110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109913290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109931c10>]}
+
+
+============================== 11:58:31.873747 | e1131faa-a8d0-454f-a930-a7724be2269f ==============================
+[0m11:58:31.873747 [info ] [MainThread]: Running with dbt=1.10.13
+[0m11:58:31.874003 [debug] [MainThread]: running dbt with arguments {'fail_fast': 'False', 'use_colors': 'True', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'no_print': 'None', 'log_path': 'logs', 'empty': 'None', 'invocation_command': 'dbt init build_wau', 'indirect_selection': 'eager', 'static_parser': 'True', 'version_check': 'True', 'profiles_dir': '/Users/aakashvardhan/.dbt', 'target_path': 'None', 'warn_error': 'None', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'cache_selected_only': 'False', 'introspect': 'True', 'log_format': 'default', 'debug': 'False', 'quiet': 'False'}
+[0m11:58:31.895256 [info ] [MainThread]: Creating dbt configuration folder at /Users/aakashvardhan/.dbt
+[0m11:58:31.896256 [debug] [MainThread]: Starter project path: /Users/aakashvardhan/Library/CloudStorage/GoogleDrive-aakashvardhan.madabhushi@sjsu.edu/My Drive/DATA 226 - Data Warehousing /Homework 7/aakash-elt-dbt/.venv/lib/python3.11/site-packages/dbt/include/starter_project
+[0m11:58:31.899532 [info ] [MainThread]: 
+Your new dbt project "build_wau" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m11:58:31.899680 [info ] [MainThread]: Setting up your profile.
+[0m12:03:35.091363 [info ] [MainThread]: Profile build_wau written to /Users/aakashvardhan/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m12:03:35.094309 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 303.2639, "process_in_blocks": "0", "process_kernel_time": 0.459714, "process_mem_max_rss": "156401664", "process_out_blocks": "0", "process_user_time": 1.310572}
+[0m12:03:35.095882 [debug] [MainThread]: Command `dbt init` succeeded at 12:03:35.095720 after 303.27 seconds
+[0m12:03:35.096379 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109932650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1098b73d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10038b7d0>]}
+[0m12:03:35.096727 [debug] [MainThread]: Flushing usage events
+[0m12:03:35.708614 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:40:53.447652 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109bc3f90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109c15dd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109c17110>]}
+
+
+============================== 12:40:53.450136 | a9353bba-f0d7-4303-807c-56c03f8e02aa ==============================
+[0m12:40:53.450136 [info ] [MainThread]: Running with dbt=1.10.13
+[0m12:40:53.450405 [debug] [MainThread]: running dbt with arguments {'target_path': 'None', 'no_print': 'None', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'cache_selected_only': 'False', 'invocation_command': 'dbt run', 'printer_width': '80', 'version_check': 'True', 'quiet': 'False', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'warn_error': 'None', 'log_format': 'default', 'introspect': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'empty': 'False', 'indirect_selection': 'eager', 'write_json': 'True', 'profiles_dir': '/Users/aakashvardhan/.dbt', 'debug': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'static_parser': 'True'}
+[0m12:40:53.450687 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/aakashvardhan/Library/CloudStorage/GoogleDrive-aakashvardhan.madabhushi@sjsu.edu/My Drive/DATA 226 - Data Warehousing /Homework 7/aakash-elt-dbt/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m12:40:53.450956 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.03251125, "process_in_blocks": "0", "process_kernel_time": 0.113784, "process_mem_max_rss": "111067136", "process_out_blocks": "0", "process_user_time": 0.458056}
+[0m12:40:53.451151 [debug] [MainThread]: Command `dbt run` failed at 12:40:53.451116 after 0.03 seconds
+[0m12:40:53.451292 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109bfcf50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1006ea890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1006ea690>]}
+[0m12:40:53.451427 [debug] [MainThread]: Flushing usage events
+[0m12:40:53.998778 [debug] [MainThread]: An error was encountered while trying to flush usage events
