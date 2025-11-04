@@ -35,4 +35,19 @@ FROM {{ source('raw', 'session_timestamp') }}
 WHERE sessionId is not NULL
 ```
 
+- Ran `dbt run` to execute the above SQL statements defined in the project
+
+![wau2](https://raw.githubusercontent.com/aakashvardhan/aakash-elt-dbt/main/screenshots/dbt-run.png)
+
+## Set up Output Models
+
+- Takes the input data (CTE-based input models) and performs various transformations into a clean dataset, in this case `session_summary`.
+
+```sql
+SELECT u.userId, u.sessionId, u.channel, st.ts
+FROM {{ ref("user_session_channel") }} u
+JOIN {{ ref("session_timestamp") }} st ON u.sessionId = st.sessionId
+```
+![wau2](https://raw.githubusercontent.com/aakashvardhan/aakash-elt-dbt/main/screenshots/dbt-run-session-summary.png)
+
 
