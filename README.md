@@ -51,3 +51,49 @@ JOIN {{ ref("session_timestamp") }} st ON u.sessionId = st.sessionId
 ![wau2](https://raw.githubusercontent.com/aakashvardhan/aakash-elt-dbt/main/screenshots/dbt-run-session-summary.png)
 
 
+## Add Snapshot for Output Table
+
+`snapshots/snapshot_session_summary.sql`
+
+```sql
+{% snapshot snapshot_session_summary.sql %}
+
+{{
+    config(
+        target_schema='snapshot',
+        unique_key='sessionId',
+        strategy='timestamp',
+        updated_at='ts',
+        invalidate_hard_deletes=True
+    )
+}}
+
+SELECT * FROM {{ ref('session_summary') }}
+
+{% endsnapshot %}
+```
+![snpshot](https://raw.githubusercontent.com/aakashvardhan/aakash-elt-dbt/main/screenshots/dbt-snapshot.png)
+
+
+## Add Tests for `sessionId` field
+
+`models/schema.yml`
+
+```
+version: 2
+
+models:
+    - name: session_summary
+      description: "Analytics model for session data"
+      columns:
+        - name: sessionId
+          description: "Unique identifier for each session"
+          data_tests:
+            - unique
+            - not_null
+```
+
+
+![snp](https://raw.githubusercontent.com/aakashvardhan/aakash-elt-dbt/main/screenshots/dbt-tests.png)
+
+
